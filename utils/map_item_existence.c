@@ -6,7 +6,7 @@
 /*   By: hbarda <hbarda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 11:41:46 by hbarda            #+#    #+#             */
-/*   Updated: 2024/06/09 12:01:51 by hbarda           ###   ########.fr       */
+/*   Updated: 2024/06/09 12:35:45 by hbarda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	check_exist_items(t_vars *data)
 	int	i;
 	int	j;
 
-        i = 0;
+	i = 0;
 	while (i < data->height)
 	{
 		i = 0;
