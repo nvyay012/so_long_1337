@@ -18,7 +18,7 @@
 
 # include <stdio.h>
 # include <stdlib.h>
-# include "mlx.h"
+# include "../minilibx-linux/mlx.h"
 # include <string.h>
 # include <unistd.h>
 # include <fcntl.h>
@@ -45,6 +45,8 @@ typedef struct s_vars
 	void	*flame;
 	void	*player_right;
 	void	*player_left;
+	void	*player_down;
+	void	*player_up;
 	int		left;
 	int		right;
 	int		up;

@@ -22,6 +22,7 @@ int     close_window(t_vars *data)
         mlx_destroy_image(data->mlx_ptr, data->exit);
         mlx_destroy_image(data->mlx_ptr, data->player_left);
         mlx_destroy_image(data->mlx_ptr, data->player_right);
+        mlx_destroy_image(data->mlx_ptr, data->player_down);
         mlx_destroy_image(data->mlx_ptr, data->flame);
         mlx_destroy_window(data->mlx_ptr, data->mlx_window);
         mlx_destroy_display(data->mlx_ptr);

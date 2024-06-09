@@ -41,3 +41,18 @@ void    destroy_exit(t_vars *data)
                 clear(data);
         }
 }
+
+void    destroy_player_down(t_vars *data)
+{
+        if (!data->player_down)
+        {
+                mlx_destroy_image(data->mlx_ptr, data->floor);
+                mlx_destroy_image(data->mlx_ptr, data->wall);
+                mlx_destroy_image(data->mlx_ptr, data->raven);
+                mlx_destroy_image(data->mlx_ptr, data->player_left);
+                mlx_destroy_image(data->mlx_ptr, data->player_right);
+                mlx_destroy_image(data->mlx_ptr, data->flame);
+                mlx_destroy_image(data->mlx_ptr, data->exit);
+                clear(data);
+        }
+}

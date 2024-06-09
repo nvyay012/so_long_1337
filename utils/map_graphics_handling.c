@@ -27,6 +27,9 @@ void    fill_items2(t_vars *data)
         data->player_right = mlx_xpm_file_to_image(data->mlx_ptr,
                         "./textures/raven_right.xpm", &data->image_width,
                         &data->image_height);
+        data->player_down = mlx_xpm_file_to_image(data->mlx_ptr,
+                        "./textures/raven_down.xpm", &data->image_width,
+                        &data->image_height);
 }
 
 void    map_draw(t_vars *data, int i, int j)
@@ -55,6 +58,9 @@ void    draw_player(t_vars *data, int i, int j)
                 else if (data->right)
                         mlx_put_image_to_window(data->mlx_ptr, data->mlx_window,
                                 data->player_right, j * 30, i * 30);
+                else if (data->down)
+                        mlx_put_image_to_window(data->mlx_ptr, data->mlx_window,
+                                data->player_down, j * 30, i * 30);
                 else
                         mlx_put_image_to_window(data->mlx_ptr, data->mlx_window,
                                 data->raven, j * 30, i * 30);
