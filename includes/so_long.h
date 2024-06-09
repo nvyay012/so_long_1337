@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hbarda <hbarda@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/09 11:41:04 by hbarda            #+#    #+#             */
+/*   Updated: 2024/06/09 11:41:06 by hbarda           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
@@ -18,7 +30,7 @@
 
 # include <stdio.h>
 # include <stdlib.h>
-# include "../minilibx-linux/mlx.h"
+# include "mlx.h"
 # include <string.h>
 # include <unistd.h>
 # include <fcntl.h>
