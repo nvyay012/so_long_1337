@@ -6,7 +6,7 @@
 /*   By: hbarda <hbarda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 11:41:50 by hbarda            #+#    #+#             */
-/*   Updated: 2024/06/09 12:11:48 by hbarda           ###   ########.fr       */
+/*   Updated: 2024/06/09 13:26:00 by hbarda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	map_check(char *path, t_vars *data)
 	line = get_next_line(fd);
 	if (!line)
 	{
-		write(1, "Error\nmap is empty", 19);
+		write(2, "Error\nmap is empty", 19);
 		close(fd);
 		exit(1);
 	}
@@ -53,7 +53,7 @@ void	map_width(char *path, t_vars *data)
 	{
 		if (w != ft_strlen2(line))
 		{
-			write(1, "Error\nmap width is not equal", 29);
+			write(2, "Error\nmap width is not equal", 29);
 			free(line);
 			close(fd);
 			exit(1);
@@ -74,7 +74,7 @@ void	map_arr(char *path, t_vars *data)
 	fd = open(path, O_RDONLY);
 	if (fd < 0)
 	{
-		write(1, "Error\nmap file does not exist", 30);
+		write(2, "Error\nmap file does not exist", 30);
 		close(fd);
 		exit(1);
 	}
@@ -99,7 +99,7 @@ void	map_arr2(char *path, t_vars *data)
 	fd = open(path, O_RDONLY);
 	if (fd < 0)
 	{
-		write(1, "Error\nmap file does not exist", 30);
+		write(2, "Error\nmap file does not exist", 30);
 		close(fd);
 		exit(1);
 	}
@@ -127,13 +127,13 @@ void	check_map_border(t_vars *data)
 		{
 			if (data->map[0][j] != '1' || data->map[data->height - 1][j] != '1')
 			{
-				write(1, "Error\nmap border is not correct", 32);
+				write(2, "Error\nmap border is not correct", 32);
 				free_map(data);
 				exit(1);
 			}
 			if (data->map[i][0] != '1' || data->map[i][data->width - 1] != '1')
 			{
-				write(1, "Error\nmap border is not correct", 32);
+				write(2, "Error\nmap border is not correct", 32);
 				free_map(data);
 				exit(1);
 			}

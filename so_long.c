@@ -6,7 +6,7 @@
 /*   By: hbarda <hbarda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 11:42:16 by hbarda            #+#    #+#             */
-/*   Updated: 2024/06/09 12:41:06 by hbarda           ###   ########.fr       */
+/*   Updated: 2024/06/09 13:27:16 by hbarda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	map_rectangle(t_vars *data)
 {
 	if (data->height == data->width)
 	{
-		write(1, "Error\nmap is not rectangular", 29);
+		write(2, "Error\nmap is not rectangular", 29);
 		exit(1);
 	}
 }
@@ -81,5 +81,5 @@ int	main(int ac, char *av[])
 		mlx_loop(data.mlx_ptr);
 	}
 	else
-		(write(1, "Error\nArgs Error...!", 20), exit(1));
+		(write(2, "Error\nArgs Error...!", 20), exit(1));
 }

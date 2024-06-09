@@ -6,7 +6,7 @@
 /*   By: hbarda <hbarda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 11:41:53 by hbarda            #+#    #+#             */
-/*   Updated: 2024/06/09 12:15:39 by hbarda           ###   ########.fr       */
+/*   Updated: 2024/06/09 13:26:06 by hbarda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	check_fd(int fd)
 {
 	if (fd < 0)
 	{
-		write(1, "Error\nmap file does not exist", 30);
+		write(2, "Error\nmap file does not exist", 30);
 		exit(1);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: hbarda <hbarda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 11:41:46 by hbarda            #+#    #+#             */
-/*   Updated: 2024/06/09 12:35:45 by hbarda           ###   ########.fr       */
+/*   Updated: 2024/06/09 13:25:23 by hbarda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ void	check_exist_items(t_vars *data)
 	i = 0;
 	while (i < data->height)
 	{
-		i = 0;
+		j = 0;
 		while (j < data->width)
 		{
 			if (data->map[i][j] != 'P' && data->map[i][j] != 'C'
 					&& data->map[i][j] != 'E' && data->map[i][j] != '1'
 					&& data->map[i][j] != '0')
 			{
-				write(1, "Error\nerror in items", 21);
+				write(2, "Error\nerror in items", 21);
 				free_map(data);
 				exit(1);
 			}
@@ -66,7 +66,7 @@ void	if_map_valid(t_vars *data)
 {
 	if (data->player != 1 || data->collectables < 1 || data->exit1 != 1)
 	{
-		write(1, "Error\nmap is not valid", 23);
+		write(2, "Error\nmap is not valid", 23);
 		free_map(data);
 		exit(1);
 	}

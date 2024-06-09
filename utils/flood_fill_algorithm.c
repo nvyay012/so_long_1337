@@ -6,7 +6,7 @@
 /*   By: hbarda <hbarda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 11:41:11 by hbarda            #+#    #+#             */
-/*   Updated: 2024/06/09 12:12:57 by hbarda           ###   ########.fr       */
+/*   Updated: 2024/06/09 13:25:04 by hbarda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	flood_fill_checker(t_vars *data)
 		{
 			if (data->map2[i][j] == 'E' || data->map2[i][j] == 'C')
 			{
-				write(1, "Error\nUnplayable MAP", 24);
+				write(2, "Error\nUnplayable MAP", 24);
 				close_window(data);
 				exit(1);
 			}

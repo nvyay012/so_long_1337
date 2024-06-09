@@ -6,7 +6,7 @@
 /*   By: hbarda <hbarda@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 11:42:11 by hbarda            #+#    #+#             */
-/*   Updated: 2024/06/09 11:42:12 by hbarda           ###   ########.fr       */
+/*   Updated: 2024/06/09 13:26:54 by hbarda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ void	check_path(char *path)
 	str = ft_strrchr(path, '.');
 	if (str == NULL)
 	{
-		write(1, "Error\nno .ber file", 19);
+		write(2, "Error\nno .ber file", 19);
 		exit(1);
 	}
 	if (ft_strcmp(".ber", str) != 0)
 	{
-		write(1, "Error\nno .ber file", 19);
+		write(2, "Error\nno .ber file", 19);
 		exit(1);
 	}
 }
@@ -59,7 +59,7 @@ void	clear(t_vars *data)
 	mlx_destroy_display(data->mlx_ptr);
 	free_map(data);
 	free(data->mlx_ptr);
-	write(1, "error \n .xpm not found", 23);
+	write(2, "error \n .xpm not found", 23);
 	exit(1);
 }
 
